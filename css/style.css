@@ -1,0 +1,218 @@
+body{
+    font-family: "Open sans",sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*==========================
+  start of Global items
+===========================*/
+.btn{
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #d9534f;
+    padding: 8px 30px; 
+}
+.row-header{
+    text-align: center;
+    padding: 30px 0;
+}
+.row-header h1{
+    font-size: 40px;
+}
+.row-header span{
+    width: 80px;
+    height: 5px;
+    background: #d9534f;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/*==========================
+    End of Global items
+===========================*/
+
+
+/*==========================
+  start of header
+===========================*/
+#home{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("../img/header6.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 10vh;
+    background: #000;
+}
+#home .header .row-col-1 h2{
+    color: #d9534f;
+    font-weight: bold;
+    margin: 17px 0;
+}
+.header .row-col-2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 10vh; 
+}
+.header .row-col-2 a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;;
+}
+.row-home{
+    height: 100vh;
+    text-align: center;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.row-home .row-col-2{
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.row-home h1{
+    color: #fff;
+    font-size: 40px ;
+}
+.row-home label{
+    color: #d9534f;
+    font-size: 40px ;
+}
+#home .row-home h2{
+    color: #fff;
+}
+.row-home h3{
+    color: #fff;
+}
+.row-home .row-col-1 a{
+    margin-top: 10px;
+}
+.row-home img{
+    cursor: pointer;
+    height: 40px;
+    animation: animate infinite 1.5s;
+}
+@keyframes animate {
+    0%,20%,50%,80%,100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(5px);
+    }
+    60%{
+        transform: translateY(3px);
+    }  
+}
+
+/*==========================
+    End of header
+===========================*/
+
+/*==========================
+    Start of About
+===========================*/
+#About{
+    width: 100%;
+}
+#About .row-2{
+    padding-top: 50px;
+}
+#About .row-2 .row-col-1{
+    display: flex;
+    justify-content: center;
+}
+#About .row-2 .row-col-2 .tech{
+    width: 300px;
+    margin-top: 10px;
+    margin-left: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+#About .row-2 .row-col-2 .tech li{
+    font-weight: bold;
+    font-size: 13px;
+}
+#About .row-2 .row-col-2 .btn{
+    margin-top: 10px;
+    padding: 10px 45px;
+}
+/*==========================
+    End of About
+===========================*/
+
+/*==========================
+    Start of Services
+===========================*/
+#Services{
+    width: 100%;
+}
+#Services .row-2{
+    padding-top: 50px;
+}
+#Services .row-2 .row-col-1 .service1,#Services .row-2 .row-col-2 .service1,#Services .row-2 .row-col-3 .service1{
+    border: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+}
+#Services .row-2 .row-col-1 .service1 i,#Services .row-2 .row-col-2 .service1 i,#Services .row-2 .row-col-3 .service1 i{
+    font-size: 50px;
+    color: #d9534f;
+}
+#Services .row-2 .row-col-1 .service1 h3,#Services .row-2 .row-col-2 .service1 h3,#Services .row-2 .row-col-3 .service1 h3{
+    font-size: 17px;
+    font-weight: bold;
+}
+#Services .row-2 .row-col-1 .service1 p,#Services .row-2 .row-col-3 .service1 p,#Services .row-2 .row-col-2 .service1 p{
+    font-size: 18px;
+    text-align: center;
+}
+/*==========================
+    End of Services
+===========================*/
+
+/*==========================
+    Start of Portfolio
+===========================*/
+
+/*==========================
+    Start of Contact
+===========================*/
+
+/*==========================
+    End of Contact
+===========================*/
+
+/*==========================
+    Start of Footer
+===========================*/
+
+/*==========================
+    End of Footer
+===========================*/
+
+/*==========================
+    Start of Responsive
+===========================*/
+
+/*==========================
+    End of Responsive
+===========================*/
