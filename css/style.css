@@ -11,8 +11,24 @@ body{
 .btn{
     color: #fff;
     border-radius: 25px;
-    border: 1px solid #d9534f;
+    border: 1px solid #C9302C;
+    background: #C9302C;
     padding: 8px 30px; 
+}
+.btn:hover{
+    opacity: 0.85; 
+}
+span{
+    width: 100%;
+    height: 3px;
+    background: #C9302C;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.row {
+    margin-right: 0;
+    margin-left: 0;
 }
 .row-header{
     text-align: center;
@@ -24,16 +40,30 @@ body{
 .row-header span{
     width: 80px;
     height: 5px;
-    background: #d9534f;
+    background: #C9302C;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
 }
-
-/*==========================
+.nav-menu{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 18px;
+    right: 28px;
+    cursor: pointer;
+    z-index: 200;
+}
+.nav-menu .nav-menu1{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+/*=========================
     End of Global items
 ===========================*/
-
+ 
 
 /*==========================
   start of header
@@ -41,47 +71,80 @@ body{
 #home{
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("../img/header6.jpg"); 
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url("../img/header1.jpg"); 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .header{
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 1;
-    height: 10vh;
+    right: 0;*/
+    z-index: 3; 
     background: #000;
+    border: none;
 }
-#home .header .row-col-1 h2{
-    color: #d9534f;
+#home .header h2{
+    color: #C9302C;
     font-weight: bold;
-    margin: 17px 0;
+    margin: 15px 0 12px 20px;
+    cursor: pointer;
 }
-.header .row-col-2{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 10vh; 
+.header ul{
+    padding: 7px 0;
 }
-.header .row-col-2 a{
-    margin-right: 20px;
+.header .navbar-toggle{
+    margin: 13px 20px 13px 0;
+    border: none;
+    color: #fff;
+    font-size: 80px;;
+}
+.header .navbar-toggle:hover,.header .navbar-toggle:focus,.header .navbar-toggle:focus-visible{
+   background: transparent;
+}
+.header .navbar-toggle .icon-bar{
+    background-color: #fff;
+    width: 30px;
+    height: 4px;
+}
+.header .navbar-toggle .icon-bar:hover{
+    background: transparent;
+    background-color: #fff;
+    width: 30px;
+    height: 4px;
+}
+.header .navbar-collapse{
+    border: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+.header .menu-a{
+    margin: 13px 0 -10px 0;
+    text-decoration: none;
+    
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.header ul li{
+    /* margin-right: 20px; */
     text-decoration: none;
     color: #fff;;
 }
 .row-home{
-    height: 100vh;
+    height: 90vh;
     text-align: center;
-    padding-top: 200px;
+    /* padding-top: 150px; */
+    padding-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 .row-home .row-col-2{
-    height: 35vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -91,7 +154,7 @@ body{
     font-size: 40px ;
 }
 .row-home label{
-    color: #d9534f;
+    color: #C9302C;
     font-size: 40px ;
 }
 #home .row-home h2{
@@ -129,6 +192,7 @@ body{
 ===========================*/
 #About{
     width: 100%;
+    padding-bottom: 50px;
 }
 #About .row-2{
     padding-top: 50px;
@@ -137,20 +201,20 @@ body{
     display: flex;
     justify-content: center;
 }
+#About .row-2 .row-col-1 img{
+    width: 100%;
+}
 #About .row-2 .row-col-2 .tech{
-    width: 300px;
+    width: 400px;
     margin-top: 10px;
     margin-left: -25px;
     display: flex;
     justify-content: space-between;
 }
-#About .row-2 .row-col-2 .tech li{
-    font-weight: bold;
-    font-size: 13px;
-}
-#About .row-2 .row-col-2 .btn{
-    margin-top: 10px;
-    padding: 10px 45px;
+#About .row-2 .row-col-2 .tech a{
+    font-size: 11px;
+    padding: 8px 10px;
+    margin: 5px 0 5px 0;
 }
 /*==========================
     End of About
@@ -161,21 +225,26 @@ body{
 ===========================*/
 #Services{
     width: 100%;
+    /* background: rgba(9, 4, 4, 0.816); */
+    background: #510A32;
+    color: #fff;
+    padding-bottom: 60px;
 }
 #Services .row-2{
     padding-top: 50px;
 }
 #Services .row-2 .row-col-1 .service1,#Services .row-2 .row-col-2 .service1,#Services .row-2 .row-col-3 .service1{
-    border: 1px solid gainsboro;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid gainsboro;
     padding: 20px 40px;
     margin-bottom: 20px;
+    /* border-radius: 10px; */
 }
 #Services .row-2 .row-col-1 .service1 i,#Services .row-2 .row-col-2 .service1 i,#Services .row-2 .row-col-3 .service1 i{
     font-size: 50px;
-    color: #d9534f;
+    color: #C9302C;
 }
 #Services .row-2 .row-col-1 .service1 h3,#Services .row-2 .row-col-2 .service1 h3,#Services .row-2 .row-col-3 .service1 h3{
     font-size: 17px;
@@ -192,11 +261,277 @@ body{
 /*==========================
     Start of Portfolio
 ===========================*/
-
+#Portfolio{
+    width: 100%;
+    padding-bottom: 60px;
+}
+#Portfolio .row-1 ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+#Portfolio .row-1 li{
+    margin-right: 70px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+#Portfolio .row-1 li a{
+    border: none;
+}
+#Portfolio .row-1 li a:hover{
+    /* color: red; */
+    /* background: #fff; */
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    /* background-color: #fff; */
+    /* border: 1px solid #ddd; */
+    /* border-bottom-color: transparent; */
+}
+/* #Portfolio .row-1 li:active,#Portfolio .row-1 li a:active{
+    color: red; 
+    background: red;
+} */
+#Portfolio .row-1 li a{
+    /* color: #C9302C; */
+    /* padding: 0; */
+    /* color: #000; */
+    /* margin-right: 10px; */
+    /* margin-left: -20px; */
+}
+#Portfolio .row-2{
+    padding-top: 30px;
+}
+#Portfolio .row-2 .row-col-1 .portfolio1,#Portfolio .row-2 .row-col-1 .portfolio2,#Portfolio .row-2 .row-col-2 .portfolio3,#Portfolio .row-2 .row-col-2 .portfolio4,#Portfolio .row-2 .row-col-3 .portfolio5,#Portfolio .row-2 .row-col-3 .portfolio6{
+    /* border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px; */
+}
+#Portfolio .row-2 #menu1 .row-col-1 .portfolio1{
+    background: url("../img/gallery/gallery-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu1 .row-col-1 .portfolio2{
+    background: url("../img/gallery/gallery-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu1 .row-col-2 .portfolio3{
+    background: url("../img/gallery/gallery-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu1 .row-col-2 .portfolio4{
+    background: url("../img/gallery/gallery-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu1 .row-col-3 .portfolio5{
+    background: url("../img/gallery/gallery-6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu1 .row-col-3 .portfolio6{
+    background: url("../img/gallery/advanced-feature-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu2 .row-col-1 .portfolio1{
+    background: url("../img/header6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu2 .row-col-2 .portfolio3{
+    background: url("../img/gallery/gallery-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu2 .row-col-3 .portfolio5{
+    background: url("../img/gallery/gallery-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu2 .row-col-1 .portfolio2{
+    background: url("../img/gallery/advanced-feature-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu3 .row-col-1 .portfolio1{
+    background: url("../img/header4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu3 .row-col-2 .portfolio3{
+    background: url("../img/header2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu3 .row-col-1 .portfolio2{
+    background: url("../img/header6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu4 .row-col-1 .portfolio1{
+    background: url("../img/header1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#Portfolio .row-2 #menu4 .row-col-1 .portfolio2{
+    background: url("../img/header4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
 /*==========================
     Start of Contact
 ===========================*/
-
+#Contact{
+    padding-bottom: 135px;
+    /* background: rgba(9, 4, 4, 0.816); */
+    background: #2d142c;
+    color: #fff;
+}
+#Contact .row-2 .row-col-2{
+    padding-left: 100px;
+}
+#Contact .row-2 .row-col-1{
+    padding-left: 50px;
+}
+#Contact .row-2 .row-col-1 h4{
+    padding: 20px 0 20px 0;
+}
+#Contact .row-2 .row-col-2 h4{
+    margin-top: 30px;
+}
+#Contact .row-2 .row-col-2 i{
+    font-size: 20px;
+    margin-top: 25px;
+}
+#Contact .row-2 .row-col-2 p{
+    display: inline-block;
+    margin-left: 10px;
+}
+#Contact .row-2 .row-col-2 .social i:hover{
+    opacity: 0.85;
+}
+#Contact .row-2 .row-col-2 .social .fa-facebook{
+    padding: 8px 14px;
+    border-radius: 50%;
+    border: 1px solid #C9302C;
+    color: #fff;
+    background: #C9302C;
+}
+#Contact .row-2 .row-col-2 .social .fa-twitter{
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 1px solid #C9302C;
+    color: #fff;
+    background: #C9302C;
+    margin-left: 5px;
+}
+#Contact .row-2 .row-col-2 .social .fa-instagram{
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 1px solid #C9302C;
+    color: #fff;
+    background: #C9302C;
+    margin-left: 5px;
+}
+#Contact .row-2 .row-col-2 .social .fa-linkedin{
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 1px solid #C9302C;
+    color: #fff;
+    background: #C9302C;
+    margin-left: 5px;
+}
+#Contact .row-2 .row-col-2 .social .fa-github{
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 1px solid #C9302C;
+    color: #fff;
+    background: #C9302C;
+    margin-left: 5px;
+}
 /*==========================
     End of Contact
 ===========================*/
@@ -204,6 +539,16 @@ body{
 /*==========================
     Start of Footer
 ===========================*/
+#Footer{
+    padding: 15px 0;
+    background: #000;
+    /* background: #2d142c; */
+    color: #fff;
+}
+#Footer .row-2 .row-col-1 h3{
+    font-size: 15px;
+    text-align: center;
+} 
 
 /*==========================
     End of Footer
@@ -213,6 +558,45 @@ body{
     Start of Responsive
 ===========================*/
 
+@media only screen and (max-width:750px)
+{
+    .header .navbar-collapse{
+        padding-bottom: 50px;
+        border: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    
+    }
+}
+@media only screen and (max-width:767px)
+{
+    #Portfolio .row-1 li{
+        margin-right: 0px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    #Portfolio .row-2 #menu1 .row-col-1 .portfolio1,#Portfolio .row-2 #menu1 .row-col-1 .portfolio2,#Portfolio .row-2 #menu1 .row-col-2 .portfolio3,#Portfolio .row-2 #menu1 .row-col-2 .portfolio4,#Portfolio .row-2 #menu1 .row-col-3 .portfolio5,#Portfolio .row-2 #menu1 .row-col-3 .portfolio6 {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    #Portfolio .row-2 #menu2 .row-col-1 .portfolio1,#Portfolio .row-2 #menu2 .row-col-1 .portfolio2,#Portfolio .row-2 #menu2 .row-col-2 .portfolio3,#Portfolio .row-2 #menu2 .row-col-3 .portfolio5{
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    #Portfolio .row-2 #menu3 .row-col-1 .portfolio1,#Portfolio .row-2 #menu3 .row-col-1 .portfolio2,#Portfolio .row-2 #menu3 .row-col-2 .portfolio3 {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    #Portfolio .row-2 #menu4 .row-col-1 .portfolio1,#Portfolio .row-2 #menu4 .row-col-1 .portfolio2 {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+} 
 /*==========================
     End of Responsive
 ===========================*/
