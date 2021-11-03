@@ -86,16 +86,12 @@ span{
 #home{
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url("../img/header1.jpg"); 
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url("../img/header6.jpg"); 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .header{
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;*/
     z-index: 3; 
     background: #000;
     border: none;
@@ -254,7 +250,7 @@ span{
     align-items: center;
     border: 1px solid beige;
     padding: 30px 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: 5px;
 }
 #Services .row-2 .row-col-1 .service1 i,#Services .row-2 .row-col-2 .service1 i,#Services .row-2 .row-col-3 .service1 i{
